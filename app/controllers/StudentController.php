@@ -10,11 +10,17 @@ class StudentController
         echo '<p>menampilkan daftar siswa</p>';
     }
     
-
     public function create(): void
     {
         echo '<h1>Tambah Siswa</h1>';            
         echo '<p>menampilkan form tambah</p>';
     }
+
+    public function show(string $id): void
+    {
+        echo '<h1>Detail Siswa</h1>';
+        echo "<p>Menampilkan detail siswa dengan ID</p>";
+    }
+
 }
 
