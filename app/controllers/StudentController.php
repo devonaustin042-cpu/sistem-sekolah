@@ -19,7 +19,7 @@ class StudentController
     public function show(string $id): void
     {
         echo '<h1>Detail Siswa</h1>';
-        echo "<p>Menampilkan detail siswa dengan ID</p>";
+        echo "<p>Menampilkan detail siswa dengan ID: $id</p>";
     }
 
 }
