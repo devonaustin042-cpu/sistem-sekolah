@@ -6,20 +6,17 @@ class StudentController
 
     public function index(): void
     {
-        echo '<h1>Daftar Siswa</h1>';            
-        echo '<p>menampilkan daftar siswa</p>';
+        require_once './app/views/students/index.php';
     }
     
     public function create(): void
     {
-        echo '<h1>Tambah Siswa</h1>';            
-        echo '<p>menampilkan form tambah</p>';
+        require_once './app/views/students/create.php';
     }
 
     public function show(string $id): void
     {
-        echo '<h1>Detail Siswa</h1>';
-        echo "<p>Menampilkan detail siswa dengan ID: $id</p>";
+        require_once './app/views/students/show.php';
     }
 
 }
