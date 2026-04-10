@@ -263,9 +263,6 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
-  .bg-blue-100 {
-    background-color: var(--color-blue-100);
-  }
   .bg-blue-500 {
     background-color: var(--color-blue-500);
   }
