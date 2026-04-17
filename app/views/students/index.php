@@ -20,20 +20,33 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td class="py-2 px-4 text-left">1</td>
-                            <td class="py-2 px-4 text-left">Andi</td>
-                            <td class="py-2 px-4 text-left">1234</td>
-                            <td class="py-2 px-4 text-left">11 TKJ 3</td>
-                            <td class="py-2 px-4 text-left">0812345678</td>
+                        <?php foreach($students as $index => $student):?>
+                            <tr>
+                                <td class="py-2 px-4 text-left">
+                                    <?= $index + 1?>
+                                </td>
+                                <td class="py-2 px-4 text-left">
+                                    <?= $student['name']?>
+                                </td>
+                                <td class="py-2 px-4 text-left">
+                                    <?= $student['nis']?>
+                                </td>
+                                <td class="py-2 px-4 text-left">
+                                    <?= $student['class']?>
+                                </td>
+                                <td class="py-2 px-4 text-left">
+                                    <?= $student['phone_number']?>
+                                </td>
                             <td class="py-2 px-4">
                                 <div class="flex items-center justify-center gap-4">
-                                    <a href="/students/1" class="text-green-500">Detail</a>
-                                    <a href="/students/1/edit" class="text-yellow-500">Edit</a>
+                                    <a href="/students/<?= $student['id'] ?>" class="text-green-500">Detail</a>
+                                    <a href="/students/<?= $student['id'] ?>/edit" class="text-yellow-500">Edit</a>
                                     <a href="" class="text-red-500">Hapus</a>
                                 </div>
                             </td>
                         </tr>
+                        <?php endforeach?>
+                        
                     </tbody>
                 </table>
               </div>
