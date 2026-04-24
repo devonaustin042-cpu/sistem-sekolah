@@ -41,7 +41,10 @@
                                 <div class="flex items-center justify-center gap-4">
                                     <a href="/students/<?= $student['id'] ?>" class="text-green-500">Detail</a>
                                     <a href="/students/<?= $student['id'] ?>/edit" class="text-yellow-500">Edit</a>
-                                    <a href="" class="text-red-500">Hapus</a>
+                                    <form onsubmit="return confirm('Apakah Anda yakin ingin menghapus data siswa ini?')" action="/students/<?= $student['id'] ?>" method="POST">
+                                        <input type="hidden" name="_method" value="DELETE">
+                                        <button type="submit" class="text-red-500">Hapus</button>
+                                    </form>
                                 </div>
                             </td>
                         </tr>
